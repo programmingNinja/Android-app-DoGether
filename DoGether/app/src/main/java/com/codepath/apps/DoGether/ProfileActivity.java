@@ -25,7 +25,7 @@ public class ProfileActivity extends AppCompatActivity {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 super.onSuccess(statusCode, headers, response);
                 currentUser = User.fromJson(response);
-                System.out.println("Response: " + response.toString());
+                //System.out.println("Response: " + response.toString());
             }
 
             @Override

@@ -11,6 +11,7 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseClassName;
 import com.parse.ParseQuery;
+import com.parse.ParseRelation;
 import com.parse.ParseUser;
 
 import java.util.Date;
@@ -77,9 +78,9 @@ public class User extends ParseObject {
                 if (e == null) {
                     if (itemList.size() <= 0) {
                         u.saveInBackground();
-                        System.out.println("saved user ");
+                        //System.out.println("saved user ");
                     }
-                    else System.out.println("duplicate user");
+                    //else System.out.println("duplicate user");
                     // Access the array of results here
                     //String firstItemId = itemList.get(0).getObjectId();
                     //Toast.makeText(TodoItemsActivity.this, firstItemId, Toast.LENGTH_SHORT).show();
@@ -89,6 +90,18 @@ public class User extends ParseObject {
                 }
             }
         });
+    }
+
+    public void setRelation(Subscription subscription) {
+
+        ParseRelation relation = this.getRelation("subscriptions");
+        relation.add(subscription);
+        this.saveInBackground();
+    }
+
+    public ParseRelation<Subscription> getSubscriptions() {
+        ParseRelation relation = this.getRelation("subscriptions");
+        return relation;
     }
 
 
