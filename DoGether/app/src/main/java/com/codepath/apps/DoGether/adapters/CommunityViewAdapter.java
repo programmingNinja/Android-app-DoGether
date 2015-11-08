@@ -9,18 +9,22 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.codepath.apps.DoGether.R;
+import com.codepath.apps.DoGether.activities.CommunityViewActivity;
 import com.codepath.apps.DoGether.models.CommunityView;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by msamant on 11/7/15.
  */
 public class CommunityViewAdapter extends ArrayAdapter<CommunityView> {
-    public CommunityViewAdapter(Context context, int resource, List<CommunityView> objects) {
-        super(context, resource, objects);
+    public CommunityViewAdapter(Context context,List<CommunityView> objects) {
+        super(context, android.R.layout.simple_list_item_1, objects);
     }
+
+
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {

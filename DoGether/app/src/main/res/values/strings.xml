@@ -8,5 +8,12 @@
     <string name="action_settings">Settings</string>
     <string name="username">Username</string>
     <string name="eventText">Event Text</string>
+    <string name="title_activity_create_event">CreateEventActivity</string>
+    <string name="Exercise">Exercise</string>
+    <string name="type">Type</string>
+    <string name="eventExercise">Enter Exercise</string>
+    <string name="eventExerciseType">Enter Exercise Type</string>
+    <string name="eventTime">Pick YourTime</string>
+    <string name="broadcastEventButton">Broadcast event</string>
 
 </resources>

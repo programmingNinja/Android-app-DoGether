@@ -54,6 +54,10 @@
             android:name=".activities.CommunityViewActivity"
             android:label="@string/title_activity_community_view" >
         </activity>
+        <activity
+            android:name=".activities.CreateEventActivity"
+            android:label="@string/title_activity_create_event" >
+        </activity>
     </application>
 
 </manifest>
